@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,700" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="app.css">
+
+    <title>Calculator Bootstrap</title>
+</head>
+
+<body>
+<div class="calculator card">
+<form name="calculator">
+    <input type="text"  name="answer" class="calculator-screen" value=""/>
+
+    <div class="calculator-keys">
+        <input type="button" value=" + " class="operator btn btn-info" onclick="calculator.answer.value += '+'" />
+        <input type="button" value=" - " class="operator btn btn-info" onclick="calculator.answer.value += '-'" />
+        <input type="button" value=" x " class="operator btn btn-info" onclick="calculator.answer.value += '*'" />
+        <input type="button" value=" / " class="operator btn btn-info" onclick="calculator.answer.value += '/'" />
+
+        <input type="button" value=" 1 " class="btn btn-light waves-effect" onclick="calculator.answer.value += '1'" />
+        <input type="button" value=" 2 " class="btn btn-light waves-effect" onclick="calculator.answer.value += '2'" />
+        <input type="button" value=" 3 " class="btn btn-light waves-effect" onclick="calculator.answer.value += '3'" />
+        <input type="button" value=" C " class="btn btn-secondary  clear" onclick="calculator.answer.value = ''" />
+
+        <input type="button" value=" 4 " class="btn btn-light waves-effect" onclick="calculator.answer.value += '4'" />
+        <input type="button" value=" 5 " class="btn btn-light waves-effect" onclick="calculator.answer.value += '5'" />
+        <input type="button" value=" 6 " class="btn btn-light waves-effect" onclick="calculator.answer.value += '6'" />
+        <input type="button" value=" . " class="btn btn-secondary dec" onclick="calculator.answer.value += '.'" />
+
+        <input type="button" value=" 7 " class="btn btn-light waves-effect" onclick="calculator.answer.value += '7'" />
+        <input type="button" value=" 8 " class="btn btn-light waves-effect" onclick="calculator.answer.value += '8'" />
+        <input type="button" value=" 9 " class="btn btn-light waves-effect" onclick="calculator.answer.value += '9'" />
+        <input type="button" value=" 0 " class="btn btn-light waves-effect" onclick="calculator.answer.value += '0'" />
+
+        <input type="button" value=" = " class="equal-sign operator btn btn-default"
+               onclick="calculator.answer.value = eval(calculator.answer.value)" />
+
+
+    </div>
+</form>
+</div>
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+</html>
