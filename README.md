@@ -2,7 +2,7 @@
 
 [Mobile Demo](https://devweb2019.cis.strath.ac.uk/~kwb17166/mad/first/index.html).
 
-[Demo](cal.gif)
+![Demo](cal.gif)
 
 #### A vanilla JavaScript pocket calculator you can use while in a hurry.
 
