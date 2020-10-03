@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html  manifest="manifest.appcache" lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="icon" sizes="192x192" href="fin.png"/>
+    <link rel="shortcut icon" href="wee.png" type="image/x-icon"/>
+    <link rel="apple-touch-icon" href="fin.png" />
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="normalize.css">
+
+    <title>Calculator</title>
+</head>
+<body>
+<header>Pocket Currency Calculator</header>
+<main>
+<div class="calculator">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+        <br>
+        <br>
+
+
+        <div class="home">
+            <p class="select">Bank Fee</p>
+        <select name="fee" id="fee">
+            <option id="0" value="0" selected>0%</option>
+            <option id="2" value = 0.02>2%</option>
+            <option id="4" value = 0.04>4%</option>
+            <option id="6" value = 0.06>6%</option>
+        </select>
+        </div>
+        <div class="home">
+            <p class="select">Home </p>
+            <select name="home" id="home">
+            <option value="EUR">🇪🇺 EUR</option>
+            <option value="USD" id="1">🇺🇸 USD</option>
+            <option value="JPY" id="JPY">🇯🇵 JPY</option>
+            <option value="BGN" id="3">🇧🇬 BGN</option>
+            <option value="CZK" id="CZK">🇨🇿 CZK</option>
+            <option value="DKK" id="DKK">🇩🇰 DKK</option>
+            <option value="GBP" selected id="GBP">🇬🇧 GBP</option>
+            <option value="HUF" id="HUF">🇭🇺 HUF</option>
+            <option value="PLN" id="PLN">🇵🇱 PLN</option>
+            <option value="RON" id="RON">🇷🇴 RON</option>
+            <option value="SEK" id="SEK">🇸🇪 SEK</option>
+            <option value="CFH" id="CFH">🇨🇭 CFH</option>
+            <option value="ISK" id="ISK">🇮🇸 ISK</option>
+            <option value="NOK" id="NOK">🇳🇴 NOK</option>
+            <option value="HRK" id="HRK">🇭🇷 HRK</option>
+            <option value="RUB" id="RUB">🇷🇺 RUB</option>
+            <option value="TRY" id="TRY">🇹🇷 TRY</option>
+            <option value="AUD" id="AUD">🇦🇺 AUD</option>
+            <option value="BRL" id="BRL">🇧🇾 BRL</option>
+            <option value="CAD" id="CAD">🇨🇦 CAD</option>
+            <option value="CNY" id="CNY">🇨🇳 CNY</option>
+            <option value="HKD" id="HKD">🇭🇰 HKD</option>
+            <option value="IDR" id="IDR">🇮🇩 IDR</option>
+            <option value="ILS" id="ILS">🇮🇱 ILS</option>
+            <option value="INR" id="INR">🇮🇳 INR</option>
+            <option value="KRW" id="KRW">🇰🇷 KRW</option>
+            <option value="MXN" id="MXN">🇲🇽 MXN</option>
+            <option value="MYR" id="MYR">🇲🇾 MYR</option>
+            <option value="NZD" id="NZD">🇳🇿 NZD</option>
+            <option value="PHP" id="PHP">🇵🇭 PHP</option>
+            <option value="SGD" id="SGD">🇸🇬 SGD</option>
+            <option value="THB" id="THB">🇹🇭 THB</option>
+            <option value="ZAR" id="ZAR">🇿🇦 ZAR</option>
+        </select>
+
+        </div>
+
+        <div class="home">
+            <p class="select">Visiting </p>
+            <select name="visiting" id="visiting">
+            <option selected value="EUR">🇪🇺 EUR</option>
+            <option value="USD" > 🇺🇸 USD</option>
+            <option value="JPY">🇯🇵 JPY</option>
+            <option value="BGN">🇧🇬 BGN</option>
+            <option value="CZK">🇨🇿 CZK</option>
+            <option value="DKK">🇩🇰 DKK</option>
+            <option value="GBP">🇬🇧 GBP</option>
+            <option value="HUF">🇭🇺 HUF</option>
+            <option value="PLN">🇵🇱 PLN</option>
+            <option value="RON">🇷🇴 RON</option>
+            <option value="SEK">🇸🇪 SEK</option>
+            <option value="CFH">🇨🇭 CFH</option>
+            <option value="ISK">🇮🇸 ISK</option>
+            <option value="NOK">🇳🇴 NOK</option>
+            <option value="HRK">🇭🇷 HRK</option>
+            <option value="RUB">🇷🇺 RUB</option>
+            <option value="TRY">🇹🇷 TRY</option>
+            <option value="AUD">🇦🇺 AUD</option>
+            <option value="BRL">🇧🇾 BRL</option>
+            <option value="CAD">🇨🇦 CAD</option>
+            <option value="CNY">🇨🇳 CNY</option>
+            <option value="HKD">🇭🇰 HKD</option>
+            <option value="IDR">🇮🇩 IDR</option>
+            <option value="ILS">🇮🇱 ILS</option>
+            <option value="INR">🇮🇳 INR</option>
+            <option value="KRW">🇰🇷 KRW</option>
+            <option value="MXN">🇲🇽 MXN</option>
+            <option value="MYR">🇲🇾 MYR</option>
+            <option value="NZD">🇳🇿 NZD</option>
+            <option value="PHP">🇵🇭 PHP</option>
+            <option value="SGD">🇸🇬 SGD</option>
+            <option value="THB">🇹🇭 THB</option>
+            <option value="ZAR">🇿🇦 ZAR</option>
+
+        </select>
+        </div>
+    </div>
+
+
+
+        <div id="burger" onclick="openNav()">
+            <div class="burger"></div>
+            <div class="burger"></div>
+            <div class="burger"></div>
+        </div>
+
+
+
+    <div class="calculator1">
+    <form name="calculator">
+        <input type="number" id="input" name="answer" class="calculator-screen" value=""/>
+        <span id="currency">
+
+        </span>
+        <div class="calculator-keys">
+            <input type="button" value=" 7 " class="keys" onclick="calculator.answer.value += '7'" />
+            <input type="button" value=" 8 " class="keys" onclick="calculator.answer.value += '8'" />
+            <input type="button" value=" 9 " class="keys" onclick="calculator.answer.value += '9'" />
+            <input type="button" value=" 4 " class="keys" onclick="calculator.answer.value += '4'" />
+            <input type="button" value=" 5 " class="keys" onclick="calculator.answer.value += '5'" />
+            <input type="button" value=" 6 " class="keys" onclick="calculator.answer.value += '6'" />
+            <input type="button" value=" 1 " class="keys" onclick="calculator.answer.value += '1'" />
+            <input type="button" value=" 2 " class="keys" onclick="calculator.answer.value += '2'" />
+            <input type="button" value=" 3 " class="keys" onclick="calculator.answer.value += '3'" />
+            <input type="button" value=" C " class="clear" onclick="calculator.answer.value = ''" />
+            <input type="button" value=" 0 " class="keys" onclick="calculator.answer.value += '0'" />
+            <input type="button" value=" = " id="eval" class="eval" />
+
+<!--            <button id="1" value="1" class="keys">1</button>-->
+<!--            <button id="2" value="2" class="keys">2</button>-->
+<!--            <button id="3" value="3" class="keys">3</button>-->
+<!--            <button id="4" value="4" class="keys">4</button>-->
+<!--            <button id="5" value="5" class="keys">5</button>-->
+<!--            <button id="6" value="6" class="keys">6</button>-->
+<!--            <button id="7" value="7" class="keys">7</button>-->
+<!--            <button id="8" value="8" class="keys">8</button>-->
+<!--            <button id="9" value="9" class="keys">9</button>-->
+<!--            <button id="c" class="clear">C</button>-->
+<!--            <button id="0" value="0" class="keys">0</button>-->
+<!--            <button id="=" class="eval">=</button>-->
+        </div>
+    </form>
+    </div>
+    <footer>CC-BY Martin Aleksandrov 2020</footer>
+</div>
+</main>
+
+<script type="text/javascript" src="Model.js"></script>
+<script type="text/javascript" src="View.js"></script>
+<script type="text/javascript" src="Controller.js"></script>
+</body>
+</html>
